@@ -14,12 +14,13 @@ function writePassword() {
 generateBtn.addEventListener("click", writePassword);
 
 
-var lower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
-var upper = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+var upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 var special =["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "+", "-", ".", "`", "~", "|", "<", ">", "=", "-", "_"]
 var numeric = ["0", "1", "2", "3", "4", "5","6","7","8","9"]
 
-var charType = [upper, lower,  numeric, special]
+var pool = []
+
 
 function generatePassword() {
   var newPassword = "";
@@ -29,8 +30,13 @@ function generatePassword() {
     alert("Please select a length between 8 and 128.")
     generatePassword()
   } else {
+    selections(lowerCase)
+    selections(upperCase)
+    selections(numeric)
+    selections(special)
+
     for (let i = 0; i < charLength; i++) {
-      var selectedType = charType[Math.floor(Math.random() * 4)]
+      var selectedType = pool[Math.floor(Math.random() * 4)]
       newPassword = newPassword.concat(selectedType[Math.floor(Math.random() * selectedType.length) ])
     }
   }
@@ -38,4 +44,31 @@ function generatePassword() {
 
 }
 
-
+function selections(x) {
+  if (x === lowerCase) {
+    var choice = confirm(`Would you like to include lower case characters into your password?`)
+    if(choice) {
+      pool.push(x)
+    }else {
+      console.log("no lower")
+    }
+  }
+  if (x === upperCase) {
+    var choice = confirm(`Would you like to include upper case characters into your password?`)
+    if(choice) {
+      pool.push(x)
+    }
+  }
+  if (x === numeric) {
+    var choice = confirm(`Would you like to include numeric characters into your password?`)
+    if(choice) {
+      pool.push(x)
+    }
+  }
+  if (x === special) {
+    var choice = confirm(`Would you like to include special characters into your password?`)
+    if(choice) {
+      pool.push(x)
+    }
+  }
+}
