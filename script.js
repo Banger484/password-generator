@@ -18,6 +18,7 @@ var upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M"
 var special =["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "+", "-", ".", "`", "~", "|", "<", ">", "=", "-", "_"," ",",","{", "}","[","]","?","/",":",";",'"',"'"]
 var numeric = ["0", "1", "2", "3", "4", "5","6","7","8","9"]
 var newPassword = "";
+var generatedPassword;
 var pool = []
 
 function generatePassword() {
@@ -31,14 +32,17 @@ function generatePassword() {
     selections(upperCase)
     selections(numeric)
     selections(special)
-    passwordCreation(charLength)
-  }
-  
-  var generatedPassword = newPassword
-  newPassword = ""
-  pool = []
-  return generatedPassword
-  
+      if (pool.length < 1) {
+        alert("Please select at least one type of character!")
+        generatePassword()
+      } else {
+        passwordCreation(charLength)
+        generatedPassword = newPassword
+        newPassword = ""
+        pool = []
+      }
+    }
+    return generatedPassword
 }
 
 function passwordCreation(x) {
