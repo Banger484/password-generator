@@ -24,7 +24,6 @@ var pool = []
 function generatePassword() {
   
   var charLength = prompt("How many characters would you like your password to be?")
-  console.log(charLength)
   if (charLength < 8 || charLength > 128) {
     alert("Please select a length between 8 and 128.")
     generatePassword()
@@ -38,14 +37,15 @@ function generatePassword() {
   
   var generatedPassword = newPassword
   newPassword = ""
+  pool = []
   return generatedPassword
   
 }
 
 function passwordCreation(x) {
   for (let i = 0; i < x; i++) {
-    var selectedType = pool[Math.floor(Math.random() * pool.length)] // selects which array to pull a character from
-    newPassword = newPassword.concat(selectedType[Math.floor(Math.random() * selectedType.length) ]) // selecting a character from the selected array
+    var selectedType = pool[Math.floor(Math.random() * pool.length)] 
+    newPassword = newPassword.concat(selectedType[Math.floor(Math.random() * selectedType.length) ]) 
   }
   return newPassword
 }
