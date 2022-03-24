@@ -21,7 +21,6 @@ var numeric = ["0", "1", "2", "3", "4", "5","6","7","8","9"]
 var newPassword = "";
 var pool = []
 
-
 function generatePassword() {
   
   var charLength = prompt("How many characters would you like your password to be?")
@@ -36,14 +35,17 @@ function generatePassword() {
     selections(special)
     passwordCreation(charLength)
   }
-  return newPassword
-
+  
+  var generatedPassword = newPassword
+  newPassword = ""
+  return generatedPassword
+  
 }
 
 function passwordCreation(x) {
   for (let i = 0; i < x; i++) {
-    var selectedType = pool[Math.floor(Math.random() * pool.length)]
-    newPassword = newPassword.concat(selectedType[Math.floor(Math.random() * selectedType.length) ])
+    var selectedType = pool[Math.floor(Math.random() * pool.length)] // selects which array to pull a character from
+    newPassword = newPassword.concat(selectedType[Math.floor(Math.random() * selectedType.length) ]) // selecting a character from the selected array
   }
   return newPassword
 }
