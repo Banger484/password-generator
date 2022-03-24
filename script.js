@@ -18,12 +18,12 @@ var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m"
 var upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 var special =["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "+", "-", ".", "`", "~", "|", "<", ">", "=", "-", "_"]
 var numeric = ["0", "1", "2", "3", "4", "5","6","7","8","9"]
-
+var newPassword = "";
 var pool = []
 
 
 function generatePassword() {
-  var newPassword = "";
+  
   var charLength = prompt("How many characters would you like your password to be?")
   console.log(charLength)
   if (charLength < 8 || charLength > 128) {
@@ -34,14 +34,18 @@ function generatePassword() {
     selections(upperCase)
     selections(numeric)
     selections(special)
-
-    for (let i = 0; i < charLength; i++) {
-      var selectedType = pool[Math.floor(Math.random() * 4)]
-      newPassword = newPassword.concat(selectedType[Math.floor(Math.random() * selectedType.length) ])
-    }
+    passwordCreation(charLength)
   }
   return newPassword
 
+}
+
+function passwordCreation(x) {
+  for (let i = 0; i < x; i++) {
+    var selectedType = pool[Math.floor(Math.random() * pool.length)]
+    newPassword = newPassword.concat(selectedType[Math.floor(Math.random() * selectedType.length) ])
+  }
+  return newPassword
 }
 
 function selections(x) {
@@ -50,7 +54,6 @@ function selections(x) {
     if(choice) {
       pool.push(x)
     }else {
-      console.log("no lower")
     }
   }
   if (x === upperCase) {
