@@ -1,100 +1,47 @@
-# 03 JavaScript: Password Generator
+# Password Generator
+  ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)<br>
+  ## Table of Contents:
+  [Description](#description)<br>
+  [Installation](#installation)<br>
+  [Usage](#usage)<br>
+  [Contributing](#contributing)<br>
+  [Tests](#tests)<br>
+  [License](#license)<br>
+  [Questions](#questions)<br>
 
-## Your Task
+  # Description
+  This application will help you create a complex password that chooses characters at random. The user is able to choose what types of characters to use for the password, as well as choose the length of the password.<br>
+   <img src="./imgs/screenshot (5).png" alt="screenshot of application" width="700"/><br>
+  ### Click on the red Generate Password button to start the application.
+  <img src="./imgs/screenshot (6).png" alt="screenshot of application" width="700"/><br> 
+### You will then start a series of prompts, starting with the desired length of the password.
+  <img src="./imgs/screenshot (7).png" alt="screenshot of application" width="700"/><br> 
+  ### Next you will get to choose between lower case and upper case alpha characters, numeric characters, and special characters.
+  <img src="./imgs/screenshot (8).png" alt="screenshot of application" width="700"/><br> 
+  ### Once all prompts are answered the application will display your randomly generated password, and you can select it, copy it, and paste it!
 
-This week’s homework requires you to modify starter code to create an application that enables employees to generate random passwords based on criteria that they’ve selected. This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean and polished, responsive user interface that adapts to multiple screen sizes.
 
-The password can include special characters. If you’re unfamiliar with these, see this [list of password special characters](https://www.owasp.org/index.php/Password_special_characters) from the OWASP Foundation.
 
-## User Story
-
-```
-AS AN employee with access to sensitive data
-I WANT to randomly generate a password that meets certain criteria
-SO THAT I can create a strong password that provides greater security
-```
-
-## Acceptance Criteria
-
-```
-GIVEN I need a new, secure password
-WHEN I click the button to generate a password
-THEN I am presented with a series of prompts for password criteria
-WHEN prompted for password criteria
-THEN I select which criteria to include in the password
-WHEN prompted for the length of the password
-THEN I choose a length of at least 8 characters and no more than 128 characters
-WHEN asked for character types to include in the password
-THEN I confirm whether or not to include lowercase, uppercase, numeric, and/or special characters
-WHEN I answer each prompt
-THEN my input should be validated and at least one character type should be selected
-WHEN all prompts are answered
-THEN a password is generated that matches the selected criteria
-WHEN the password is generated
-THEN the password is either displayed in an alert or written to the page
-```
-
-## Mock-Up
-
-The following image shows the web application's appearance and functionality:
-
-![The Password Generator application displays a red button to "Generate Password".](./Assets/03-javascript-homework-demo.png)
-
-## Grading Requirements
-
-> **Note**: If a homework assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
->
-> * A repository that has no code
->
-> * A repository that includes a unique name but nothing else
->
-> * A repository that includes only a README file but nothing else
->
-> * A repository that only includes starter code
-
-This homework is graded based on the following criteria: 
-
-### Technical Acceptance Criteria: 40%
-
-* Satisfies all of the preceding acceptance criteria.
-
-### Deployment: 32%
-
-* Application deployed at live URL.
-
-* Application loads with no errors.
-
-* Application GitHub URL submitted.
-
-* GitHub repository that contains application code.
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate.
-
-* Application user interface style is clean and polished.
-
-* Application resembles the mock-up functionality provided in the homework instructions.
-
-### Repository Quality: 13%
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains quality readme file with description, screenshot, and link to deployed application.
-
-## Review
-
-You are required to submit the following for review:
-
-* The URL of the deployed application.
-
-* The URL of the GitHub repository, with a unique name and a readme describing the project.
-
-- - -
-© 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+  # [Link to live project](https://banger484.github.io/password-generator/)
+  # Installation
+  No installation necessary.
+  # Usage
+  Feel free to use this application as much as you like!
+  # Contributing
+  If you wish to contribute, please fork the repo.
+  # Tests
+  Testing not yet implemented.
+  # License
+  [The MIT license](https://opensource.org/licenses/MIT)
+  
+    Copyright 2022 Bret Banger
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+  # Questions
+  ### GitHub Username: [Banger484](https://github.com/Banger484)<br>
+  ### Email Address:   Banger484@gmail.com<br>
+  If you have any additional questions, you can send an email to the address provided above.
